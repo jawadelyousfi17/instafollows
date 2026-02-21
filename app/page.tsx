@@ -108,14 +108,14 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen font-display overflow-x-hidden bg-[#f5f8f6] dark:bg-[#102216]">
       {/* Top Navigation */}
-      <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-[#22492f] px-6 py-4 lg:px-10 sticky top-0 z-50 bg-[#f5f8f6]/80 dark:bg-[#102216]/80 backdrop-blur-md">
-        <div className="flex items-center gap-4">
-          <div className="size-8 text-[#0df259]">
-            <span className="material-symbols-outlined text-4xl">
+      <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-[#22492f] px-4 py-3 md:px-6 md:py-4 lg:px-10 sticky top-0 z-50 bg-[#f5f8f6]/80 dark:bg-[#102216]/80 backdrop-blur-md">
+        <div className="flex items-center gap-2 md:gap-4">
+          <div className="size-6 md:size-8 text-[#0df259]">
+            <span className="material-symbols-outlined text-3xl md:text-4xl">
               rocket_launch
             </span>
           </div>
-          <h2 className="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">
+          <h2 className="text-slate-900 dark:text-white text-lg md:text-xl font-bold leading-tight tracking-[-0.015em]">
             Account Booster
           </h2>
         </div>
@@ -151,49 +151,49 @@ export default function Home() {
       </header>
 
       {/* Main Content Area */}
-      <main className="flex-grow flex flex-col items-center justify-center px-4 py-10 lg:py-20 relative">
+      <main className="flex-grow flex flex-col items-center justify-center px-4 py-6 md:py-10 lg:py-20 relative">
         {/* Abstract Background Glows */}
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#0df259]/10 rounded-full blur-[128px] pointer-events-none"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-[128px] pointer-events-none"></div>
 
-        <div className="w-full max-w-[960px] flex flex-col items-center gap-12 z-10">
+        <div className="w-full max-w-[960px] flex flex-col items-center gap-8 md:gap-12 z-10">
           {!profile && !boostComplete && (
             /* STAGE 1: SEARCH */
             <>
               {/* Hero Text */}
-              <div className="flex flex-col gap-6 text-center max-w-3xl animate-fade-in-up">
-                <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-[#183422] border border-[#22492f] w-fit mx-auto mb-2">
-                  <span className="relative flex h-2.5 w-2.5">
+              <div className="flex flex-col gap-2 md:gap-6 text-center max-w-3xl animate-fade-in-up">
+                <div className="inline-flex items-center justify-center gap-1.5 md:gap-2 px-2.5 py-1 md:px-4 md:py-2 rounded-full bg-[#183422] border border-[#22492f] w-fit mx-auto mb-1 md:mb-2">
+                  <span className="relative flex h-2 w-2 md:h-2.5 md:w-2.5">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0df259] opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#0df259]"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 md:h-2.5 md:w-2.5 bg-[#0df259]"></span>
                   </span>
-                  <span className="text-[#0df259] text-xs font-bold uppercase tracking-wide">
+                  <span className="text-[#0df259] text-[9px] md:text-xs font-bold uppercase tracking-wide">
                     System Operational
                   </span>
                 </div>
-                <h1 className="text-slate-900 dark:text-white text-5xl md:text-7xl font-black leading-[1.1] tracking-[-0.033em]">
+                <h1 className="text-slate-900 dark:text-white text-3xl md:text-5xl lg:text-7xl font-black leading-[1.1] tracking-[-0.033em]">
                   Grow your audience{" "}
                   <span className="text-[#0df259]">exponentially</span>
                 </h1>
-                <p className="text-slate-600 dark:text-slate-300 text-lg md:text-xl font-normal leading-relaxed max-w-2xl mx-auto">
-                  The safest, most advanced engine for Instagram
-                  growth. 100% risk-free analysis.
+                <p className="text-slate-600 dark:text-slate-300 text-sm md:text-lg lg:text-xl font-normal leading-relaxed max-w-xl md:max-w-2xl mx-auto px-4">
+                  The safest, most advanced engine for Instagram growth. 100%
+                  risk-free analysis.
                 </p>
               </div>
 
               {/* Search Component */}
-              <div className="w-full max-w-[580px] relative group">
+              <div className="w-full max-w-[90%] md:max-w-[580px] relative group">
                 {/* Glowing border effect */}
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-[#0df259] to-blue-500 rounded-full opacity-30 group-hover:opacity-70 transition duration-500 blur"></div>
-                <div className="relative flex items-center bg-white dark:bg-[#183422] border border-slate-200 dark:border-[#22492f] rounded-full shadow-2xl p-2 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#0df259]/50 focus-within:border-[#0df259]">
-                  <div className="pl-4 pr-2 text-slate-400 dark:text-slate-500">
-                    <span className="material-symbols-outlined text-2xl">
+                <div className="relative flex items-center bg-white dark:bg-[#183422] border border-slate-200 dark:border-[#22492f] rounded-full shadow-2xl p-1 md:p-2 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#0df259]/50 focus-within:border-[#0df259]">
+                  <div className="pl-3 pr-1 md:pl-4 md:pr-2 text-slate-400 dark:text-slate-500">
+                    <span className="material-symbols-outlined text-xl md:text-2xl">
                       alternate_email
                     </span>
                   </div>
                   <input
                     aria-label="Instagram Username"
-                    className="w-full bg-transparent border-none text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-0 text-lg py-3 px-2 font-medium"
+                    className="w-full bg-transparent border-none text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-0 text-base md:text-lg py-2 px-1 md:py-3 md:px-2 font-medium"
                     placeholder="Enter Instagram Username..."
                     type="text"
                     value={username}
@@ -223,14 +223,14 @@ export default function Home() {
                   <button
                     onClick={handleSearch}
                     disabled={loadingProfile || !username.trim()}
-                    className="flex sm:hidden shrink-0 items-center justify-center bg-[#0df259] hover:bg-[#0df259]/90 disabled:opacity-70 text-[#102316] w-12 h-12 rounded-full font-bold transition-transform hover:scale-105 active:scale-95"
+                    className="flex sm:hidden shrink-0 items-center justify-center bg-[#0df259] hover:bg-[#0df259]/90 disabled:opacity-70 text-[#102316] w-10 h-10 rounded-full font-bold transition-transform hover:scale-105 active:scale-95"
                   >
                     {loadingProfile ? (
-                      <span className="material-symbols-outlined animate-spin text-xl">
+                      <span className="material-symbols-outlined animate-spin text-lg">
                         progress_activity
                       </span>
                     ) : (
-                      <span className="material-symbols-outlined text-xl">
+                      <span className="material-symbols-outlined text-lg">
                         search
                       </span>
                     )}
@@ -286,25 +286,25 @@ export default function Home() {
           {!boostComplete && profile && (
             /* STAGE 2: PROFILE & BOOST */
             <div className="flex flex-col items-center justify-center p-4 md:p-8 w-full max-w-4xl animate-fade-in-up">
-              <div className="w-full flex flex-col gap-8">
+              <div className="w-full flex flex-col gap-6 md:gap-8">
                 {/* Breadcrumbs / Steps */}
-                <div className="flex items-center justify-center gap-3 text-sm font-medium text-slate-400 mb-4">
-                  <div className="flex items-center gap-2">
-                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary/20 text-primary text-xs">
+                <div className="flex items-center justify-center gap-2 md:gap-3 text-xs md:text-sm font-medium text-slate-400 mb-2 md:mb-4">
+                  <div className="flex items-center gap-1.5 md:gap-2">
+                    <span className="flex h-5 w-5 md:h-6 md:w-6 items-center justify-center rounded-full bg-primary/20 text-primary text-[10px] md:text-xs">
                       1
                     </span>
                     <span>Search</span>
                   </div>
-                  <span className="w-8 h-px bg-[#22492f]"></span>
-                  <div className="flex items-center gap-2 text-primary">
-                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary text-[#102316] text-xs font-bold">
+                  <span className="w-4 md:w-8 h-px bg-[#22492f]"></span>
+                  <div className="flex items-center gap-1.5 md:gap-2 text-primary">
+                    <span className="flex h-5 w-5 md:h-6 md:w-6 items-center justify-center rounded-full bg-primary text-[#102316] text-[10px] md:text-xs font-bold">
                       2
                     </span>
                     <span>Selection</span>
                   </div>
-                  <span className="w-8 h-px bg-[#22492f]"></span>
-                  <div className="flex items-center gap-2">
-                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#22492f] text-slate-400 text-xs">
+                  <span className="w-4 md:w-8 h-px bg-[#22492f]"></span>
+                  <div className="flex items-center gap-1.5 md:gap-2">
+                    <span className="flex h-5 w-5 md:h-6 md:w-6 items-center justify-center rounded-full bg-[#22492f] text-slate-400 text-[10px] md:text-xs">
                       3
                     </span>
                     <span>Processing</span>
@@ -312,18 +312,18 @@ export default function Home() {
                 </div>
 
                 {/* Profile Card */}
-                <div className="relative overflow-hidden rounded-xl bg-[#1a2e21] border border-[#22492f] p-8 md:p-10 shadow-2xl">
+                <div className="relative overflow-hidden rounded-xl bg-[#1a2e21] border border-[#22492f] p-5 md:p-10 shadow-2xl">
                   {/* Background decorative elements */}
                   <div className="absolute -top-24 -left-24 h-64 w-64 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
                   <div className="absolute -bottom-24 -right-24 h-64 w-64 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
 
-                  <div className="relative z-10 flex flex-col items-center gap-8">
+                  <div className="relative z-10 flex flex-col items-center gap-6 md:gap-8">
                     {!isBoosting ? (
                       <>
                         {/* Profile Header */}
-                        <div className="flex flex-col items-center gap-4 text-center">
+                        <div className="flex flex-col items-center gap-3 md:gap-4 text-center">
                           <div className="relative">
-                            <div className="h-32 w-32 rounded-full border-4 border-primary p-1 shadow-[0_0_40px_-5px_rgba(13,242,89,0.3)] bg-background-dark overflow-hidden">
+                            <div className="h-24 w-24 md:h-32 md:w-32 rounded-full border-4 border-primary p-1 shadow-[0_0_40px_-5px_rgba(13,242,89,0.3)] bg-background-dark overflow-hidden">
                               <img
                                 src={
                                   profile.profilePic
@@ -334,19 +334,19 @@ export default function Home() {
                                 className="w-full h-full object-cover rounded-full"
                               />
                             </div>
-                            <div className="absolute bottom-0 right-0 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-[#102316] border-4 border-[#1a2e21]">
-                              <span className="material-symbols-outlined text-lg font-bold">
+                            <div className="absolute bottom-0 right-0 flex h-6 w-6 md:h-8 md:w-8 items-center justify-center rounded-full bg-primary text-[#102316] border-4 border-[#1a2e21]">
+                              <span className="material-symbols-outlined text-sm md:text-lg font-bold">
                                 check
                               </span>
                             </div>
                           </div>
                           <div className="flex flex-col items-center">
-                            <h1 className="text-3xl font-bold tracking-tight text-white">
+                            <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-white">
                               @{profile.username}
                             </h1>
                             <div className="mt-1 flex items-center gap-2 rounded-full bg-[#22492f]/50 px-3 py-1 backdrop-blur-sm">
-                              <span className="h-2 w-2 rounded-full bg-primary animate-pulse"></span>
-                              <span className="text-xs font-medium text-primary">
+                              <span className="h-1.5 w-1.5 md:h-2 md:w-2 rounded-full bg-primary animate-pulse"></span>
+                              <span className="text-[10px] md:text-xs font-medium text-primary">
                                 Profile Verified & Ready
                               </span>
                             </div>
@@ -354,28 +354,28 @@ export default function Home() {
                         </div>
 
                         {/* Stats Grid */}
-                        <div className="grid w-full grid-cols-3 gap-4 border-y border-[#22492f] py-6">
-                          <div className="flex flex-col items-center justify-center gap-1 border-r border-[#22492f] last:border-0">
-                            <span className="text-2xl font-bold text-white">
+                        <div className="grid w-full grid-cols-3 gap-2 md:gap-4 border-y border-[#22492f] py-4 md:py-6">
+                          <div className="flex flex-col items-center justify-center gap-0.5 md:gap-1 border-r border-[#22492f] last:border-0">
+                            <span className="text-xl md:text-2xl font-bold text-white">
                               {formatNumber(profile.stats.followers)}
                             </span>
-                            <span className="text-xs font-medium uppercase tracking-wider text-slate-400">
+                            <span className="text-[10px] md:text-xs font-medium uppercase tracking-wider text-slate-400">
                               Followers
                             </span>
                           </div>
-                          <div className="flex flex-col items-center justify-center gap-1 border-r border-[#22492f] last:border-0">
-                            <span className="text-2xl font-bold text-white">
+                          <div className="flex flex-col items-center justify-center gap-0.5 md:gap-1 border-r border-[#22492f] last:border-0">
+                            <span className="text-xl md:text-2xl font-bold text-white">
                               {formatNumber(profile.stats.following)}
                             </span>
-                            <span className="text-xs font-medium uppercase tracking-wider text-slate-400">
+                            <span className="text-[10px] md:text-xs font-medium uppercase tracking-wider text-slate-400">
                               Following
                             </span>
                           </div>
-                          <div className="flex flex-col items-center justify-center gap-1">
-                            <span className="text-2xl font-bold text-white">
+                          <div className="flex flex-col items-center justify-center gap-0.5 md:gap-1">
+                            <span className="text-xl md:text-2xl font-bold text-white">
                               {formatNumber(profile.stats.posts)}
                             </span>
-                            <span className="text-xs font-medium uppercase tracking-wider text-slate-400">
+                            <span className="text-[10px] md:text-xs font-medium uppercase tracking-wider text-slate-400">
                               Posts
                             </span>
                           </div>
@@ -473,20 +473,20 @@ export default function Home() {
                       </>
                     ) : (
                       /* LOADING STATE - STEP 3 DESIGN */
-                      <div className="w-full flex flex-col items-center gap-12 animate-fade-in-up">
+                      <div className="w-full flex flex-col items-center gap-6 md:gap-12 animate-fade-in-up">
                         {/* Central Processing Unit */}
                         <div className="relative w-full">
                           {/* Status Header */}
-                          <div className="flex justify-between items-end mb-6 px-2">
+                          <div className="flex flex-col md:flex-row justify-between md:items-end mb-4 md:mb-6 px-1 md:px-2 gap-4 md:gap-0">
                             <div className="flex flex-col gap-1">
-                              <span className="text-primary text-sm font-bold uppercase tracking-widest opacity-80">
+                              <span className="text-primary text-[10px] md:text-sm font-bold uppercase tracking-widest opacity-80">
                                 Current Status
                               </span>
-                              <div className="flex items-center gap-3">
-                                <span className="material-symbols-outlined text-primary animate-spin">
+                              <div className="flex items-center gap-2 md:gap-3">
+                                <span className="material-symbols-outlined text-primary text-xl md:text-2xl animate-spin">
                                   sync
                                 </span>
-                                <h2 className="text-3xl md:text-4xl font-bold text-white drop-shadow-[0_0_20px_rgba(13,242,89,0.5)]">
+                                <h2 className="text-xl md:text-4xl font-bold text-white drop-shadow-[0_0_20px_rgba(13,242,89,0.5)]">
                                   {boostProgress < 30
                                     ? "Analyzing Profile..."
                                     : boostProgress < 70
@@ -495,15 +495,15 @@ export default function Home() {
                                 </h2>
                               </div>
                             </div>
-                            <div className="text-right">
-                              <span className="text-6xl md:text-7xl font-bold text-primary tabular-nums tracking-tighter drop-shadow-[0_0_20px_rgba(13,242,89,0.5)]">
+                            <div className="text-right self-end md:self-auto">
+                              <span className="text-5xl md:text-7xl font-bold text-primary tabular-nums tracking-tighter drop-shadow-[0_0_20px_rgba(13,242,89,0.5)]">
                                 {Math.round(boostProgress)}%
                               </span>
                             </div>
                           </div>
 
                           {/* Progress Bar Container */}
-                          <div className="h-6 md:h-8 w-full bg-[#1a3322] rounded-full overflow-hidden border border-primary/20 relative shadow-inner">
+                          <div className="h-4 md:h-8 w-full bg-[#1a3322] rounded-full overflow-hidden border border-primary/20 relative shadow-inner">
                             {/* Moving Progress Fill */}
                             <div
                               className="h-full bg-primary relative rounded-full shadow-[0_0_20px_rgba(13,242,89,0.6)] flex items-center justify-end pr-2 overflow-hidden transition-all duration-300 ease-out"
@@ -524,25 +524,25 @@ export default function Home() {
                           </div>
 
                           {/* Detailed Metrics / Steps */}
-                          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 text-center md:text-left">
+                          <div className="mt-4 md:mt-8 grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 text-center md:text-left">
                             {/* Step 1: Analysis */}
                             <div
-                              className={`p-5 rounded-xl border border-primary/30 flex flex-col gap-2 relative overflow-hidden group transition-all duration-500 ${boostProgress > 30 ? "bg-primary/10 opacity-50" : "bg-primary/20 shadow-[0_0_15px_rgba(13,242,89,0.15)]"}`}
+                              className={`p-3 md:p-5 rounded-xl border border-primary/30 flex flex-col gap-1 md:gap-2 relative overflow-hidden group transition-all duration-500 ${boostProgress > 30 ? "bg-primary/10 opacity-50" : "bg-primary/20 shadow-[0_0_15px_rgba(13,242,89,0.15)]"}`}
                             >
-                              <div className="flex items-center justify-between mb-1">
-                                <span className="text-xs font-bold text-primary uppercase tracking-wider">
+                              <div className="flex items-center justify-between mb-0 md:mb-1">
+                                <span className="text-[10px] md:text-xs font-bold text-primary uppercase tracking-wider">
                                   Step 01
                                 </span>
-                                <span className="material-symbols-outlined text-primary text-sm">
+                                <span className="material-symbols-outlined text-primary text-xs md:text-sm">
                                   {boostProgress > 30
                                     ? "check_circle"
                                     : "pending"}
                                 </span>
                               </div>
-                              <div className="text-lg font-bold text-white">
+                              <div className="text-sm md:text-lg font-bold text-white">
                                 Analysis
                               </div>
-                              <p className="text-xs text-slate-400">
+                              <p className="text-[10px] md:text-xs text-slate-400">
                                 Profile metrics & audience targeting
                                 initialized.
                               </p>
@@ -550,17 +550,17 @@ export default function Home() {
 
                             {/* Step 2: Queueing (Active) */}
                             <div
-                              className={`p-5 rounded-xl border flex flex-col gap-2 relative transition-all duration-500 ${boostProgress >= 30 && boostProgress < 70 ? "border-primary bg-primary/10 shadow-[0_0_15px_rgba(13,242,89,0.15)] ring-1 ring-primary/50" : "border-primary/10 bg-[#1a3322]/50 opacity-60"}`}
+                              className={`p-3 md:p-5 rounded-xl border flex flex-col gap-1 md:gap-2 relative transition-all duration-500 ${boostProgress >= 30 && boostProgress < 70 ? "border-primary bg-primary/10 shadow-[0_0_15px_rgba(13,242,89,0.15)] ring-1 ring-primary/50" : "border-primary/10 bg-[#1a3322]/50 opacity-60"}`}
                             >
                               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-50"></div>
-                              <div className="flex items-center justify-between mb-1">
+                              <div className="flex items-center justify-between mb-0 md:mb-1">
                                 <span
-                                  className={`text-xs font-bold uppercase tracking-wider ${boostProgress >= 30 && boostProgress < 70 ? "text-white" : "text-slate-500"}`}
+                                  className={`text-[10px] md:text-xs font-bold uppercase tracking-wider ${boostProgress >= 30 && boostProgress < 70 ? "text-white" : "text-slate-500"}`}
                                 >
                                   Step 02
                                 </span>
                                 <span
-                                  className={`material-symbols-outlined text-sm ${boostProgress >= 30 && boostProgress < 70 ? "text-white animate-pulse" : "text-slate-500"}`}
+                                  className={`material-symbols-outlined text-xs md:text-sm ${boostProgress >= 30 && boostProgress < 70 ? "text-white animate-pulse" : "text-slate-500"}`}
                                 >
                                   {boostProgress > 70
                                     ? "check_circle"
@@ -568,12 +568,12 @@ export default function Home() {
                                 </span>
                               </div>
                               <div
-                                className={`text-lg font-bold ${boostProgress >= 30 && boostProgress < 70 ? "text-primary" : "text-slate-300"}`}
+                                className={`text-sm md:text-lg font-bold ${boostProgress >= 30 && boostProgress < 70 ? "text-primary" : "text-slate-300"}`}
                               >
                                 Queueing
                               </div>
                               <p
-                                className={`text-xs ${boostProgress >= 30 && boostProgress < 70 ? "text-slate-300" : "text-slate-500"}`}
+                                className={`text-[10px] md:text-xs ${boostProgress >= 30 && boostProgress < 70 ? "text-slate-300" : "text-slate-500"}`}
                               >
                                 Allocating server resources for optimal delivery
                                 speed.
@@ -582,27 +582,27 @@ export default function Home() {
 
                             {/* Step 3: Delivery */}
                             <div
-                              className={`p-5 rounded-xl border flex flex-col gap-2 transition-all duration-500 ${boostProgress >= 70 ? "border-primary bg-primary/10 shadow-[0_0_15px_rgba(13,242,89,0.15)] ring-1 ring-primary/50" : "border-[#1a3322] bg-[#1a3322]/50 opacity-60"}`}
+                              className={`p-3 md:p-5 rounded-xl border flex flex-col gap-1 md:gap-2 transition-all duration-500 ${boostProgress >= 70 ? "border-primary bg-primary/10 shadow-[0_0_15px_rgba(13,242,89,0.15)] ring-1 ring-primary/50" : "border-[#1a3322] bg-[#1a3322]/50 opacity-60"}`}
                             >
-                              <div className="flex items-center justify-between mb-1">
+                              <div className="flex items-center justify-between mb-0 md:mb-1">
                                 <span
-                                  className={`text-xs font-bold uppercase tracking-wider ${boostProgress >= 70 ? "text-white" : "text-slate-500"}`}
+                                  className={`text-[10px] md:text-xs font-bold uppercase tracking-wider ${boostProgress >= 70 ? "text-white" : "text-slate-500"}`}
                                 >
                                   Step 03
                                 </span>
                                 <span
-                                  className={`material-symbols-outlined text-sm ${boostProgress >= 70 ? "text-white animate-spin" : "text-slate-500"}`}
+                                  className={`material-symbols-outlined text-xs md:text-sm ${boostProgress >= 70 ? "text-white animate-spin" : "text-slate-500"}`}
                                 >
                                   circle
                                 </span>
                               </div>
                               <div
-                                className={`text-lg font-bold ${boostProgress >= 70 ? "text-primary" : "text-slate-300"}`}
+                                className={`text-sm md:text-lg font-bold ${boostProgress >= 70 ? "text-primary" : "text-slate-300"}`}
                               >
                                 Delivery
                               </div>
                               <p
-                                className={`text-xs ${boostProgress >= 70 ? "text-slate-300" : "text-slate-500"}`}
+                                className={`text-[10px] md:text-xs ${boostProgress >= 70 ? "text-slate-300" : "text-slate-500"}`}
                               >
                                 Executing growth patterns based on analysis.
                               </p>
@@ -610,7 +610,7 @@ export default function Home() {
                           </div>
 
                           {/* Simulation Terminal Log */}
-                          <div className="mt-6 p-4 rounded-xl bg-black/40 border border-primary/10 font-mono text-xs text-primary/80 h-32 overflow-hidden relative text-left">
+                          <div className="mt-4 md:mt-6 p-3 md:p-4 rounded-xl bg-black/40 border border-primary/10 font-mono text-[10px] md:text-xs text-primary/80 h-24 md:h-32 overflow-hidden relative text-left">
                             <div
                               className="absolute inset-0 pointer-events-none bg-gradient-to-b from-transparent via-[#0df259]/10 to-transparent animate-[scanline_4s_linear_infinite]"
                               style={{ backgroundSize: "100% 200%" }}
