@@ -58,7 +58,9 @@ export async function getInstagramProfile(
   };
 
   try {
+    console.log("PPPP");
     const response = await axios.request(o);
+    console.log(response);
     const data = response.data.result;
     if (!data) {
       console.log("No data found in response", response.data);
@@ -79,6 +81,7 @@ export async function getInstagramProfile(
     };
     return formattedProfile;
   } catch (error) {
+    console.log(error)
     return { error: "ERROR" };
   }
 }
