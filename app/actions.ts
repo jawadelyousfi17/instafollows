@@ -43,60 +43,27 @@ export async function getInstagramProfile(
   username: string,
 ): Promise<FormattedProfile | { error: string }> {
   // RapidAPI config
-  const options = {
-    method: "GET", // NOTE: RapidAPI usually uses GET for fetching data, but the user snippet used POST? I'll check the snippet. The user snippet says POST.
-    url: "https://instagram-scraper-2022.p.rapidapi.com/ig/info_username/", // Wait, the user provided a different URL and KEY. Let me refer to the USER SNIPPET.
-    params: { user: username },
-    headers: {
-      "x-rapidapi-key": "763cf1c4b9msh06c005a3b61ac0ap1158e4jsn4a236ac9db52",
-      "x-rapidapi-host": "instagram-scraper-2022.p.rapidapi.com",
-    },
-  };
-  
-  // WAIT. The user provided SPECIFIC CODE. I should use THAT code.
-  /*
-  const options = {
-    method: "POST",
-    url: "https://instagram120.p.rapidapi.com/api/instagram/profile",
-    headers: {
-      "x-rapidapi-key": "763cf1c4b9msh06c005a3b61ac0ap1158e4jsn4a236ac9db52", // Ideally store in process.env.RAPIDAPI_KEY
-      "x-rapidapi-host": "instagram120.p.rapidapi.com",
-      "Content-Type": "application/json",
-    },
-    data: {
-      username: username,
-    },
-  };
-  */
 
-  // Let me replace with user's specific implementation.
-  const userOptions = {
+  const o = {
     method: "POST",
     url: "https://instagram120.p.rapidapi.com/api/instagram/profile",
     headers: {
-      "x-rapidapi-key": "763cf1c4b9msh06c005a3b61ac0ap1158e4jsn4a236ac9db52",
+      "x-rapidapi-key": "2a97b8c83cmsh83aa6c742f04660p14dd91jsn674d51427a4b",
       "x-rapidapi-host": "instagram120.p.rapidapi.com",
       "Content-Type": "application/json",
     },
     data: {
-      username: username,
+      username,
     },
   };
 
   try {
-    const response = await axios.request<any>(userOptions);
-    // The user snippet says response.data?.result;
-    // But axios returns the data in response.data.
-    // So response.data is the body. The body has a result property.
-    
-    const data = response.data?.result;
-
+    const response = await axios.request(o);
+    const data = response.data.result;
     if (!data) {
       console.log("No data found in response", response.data);
       return { error: "Profile not found or API error" };
     }
-
-    // 3. Map the raw API data to your clean structure
     const formattedProfile: FormattedProfile = {
       username: data.username,
       fullName: data.full_name,
@@ -110,10 +77,8 @@ export async function getInstagramProfile(
       },
       isPrivate: data.is_private,
     };
-
     return formattedProfile;
   } catch (error) {
-    console.error("Instagram Profile API Error:", error);
-    return { error: "Failed to fetch Instagram profile" };
+    return { error: "ERROR" };
   }
 }
